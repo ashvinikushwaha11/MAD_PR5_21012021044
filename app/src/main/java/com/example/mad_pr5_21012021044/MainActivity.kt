@@ -27,6 +27,23 @@ class MainActivity : AppCompatActivity() {
         callButton.setOnClickListener {
             onCall(editTextCall.text.toString())
         }
+
+        val callLogButton: Button = findViewById(R.id.button)
+        callLogButton.setOnClickListener {
+            onCallLog()
+        }
+        val galleryButton: Button = findViewById(R.id.button2)
+        galleryButton.setOnClickListener {
+            onGallery()
+        }
+        val cameraButton: Button = findViewById(R.id.button3)
+        cameraButton.setOnClickListener {
+            onCamera()
+        }
+        val alarmButton: Button = findViewById(R.id.button4)
+        alarmButton.setOnClickListener {
+            onAlarm()
+        }
     }
     fun onBrowser(url:String){
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).also { startActivity(it) }
